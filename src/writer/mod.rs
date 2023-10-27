@@ -179,7 +179,8 @@ pub fn try_construct_der_seq<F, E>(callback: F) -> Result<Vec<u8> , E>
 /// ```
 #[derive(Debug)]
 pub struct DERWriter<'a> {
-    buf: &'a mut Vec<u8>,
+    /// Make this pub for Rust-SGX
+    pub buf: &'a mut Vec<u8>,
     implicit_tag: Option<Tag>,
 }
 
@@ -1212,7 +1213,8 @@ impl<'a> DERWriter<'a> {
 /// ```
 #[derive(Debug)]
 pub struct DERWriterSeq<'a> {
-    buf: &'a mut Vec<u8>,
+    /// Make this pub for Rust-SGX
+    pub buf: &'a mut Vec<u8>,
 }
 
 impl<'a> DERWriterSeq<'a> {
